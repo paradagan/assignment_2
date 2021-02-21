@@ -8,7 +8,7 @@ def webServer(port=13331):
     #Prepare a sever socket
     serverSocket.bind(("", port))
     #Fill in start
-    serverSocket.listen(1)
+    serverSocket.listen(5)
     #Fill in end
 
 
@@ -32,7 +32,6 @@ def webServer(port=13331):
 
             connectionSocket.send("\r\n".encode())
             connectionSocket.close()
-            break
         except IOError:
             #Send response message for file not found (404)
             #Fill in start
